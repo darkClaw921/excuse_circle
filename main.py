@@ -16,7 +16,7 @@ from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 import os
 
-logger.add('log.log', level='INFO')
+logger.add('log.log', level='DEBUG')
 
 load_dotenv()
 tgToken = os.environ.get('TG_TOKEN')
@@ -24,8 +24,18 @@ tgToken = os.environ.get('TG_TOKEN')
 bot = Bot(token=str(tgToken)) 
 dp = Dispatcher(bot,storage=MemoryStorage())
 dp.middleware.setup(LoggingMiddleware())
-sticers = ['CAACAgIAAxkBAAEGNfZjWZ3YTcWVtueIDDinJZwFiB5ZRQACUSAAAlLuyUoShx3sN6ZoKyoE',
-           'CAACAgIAAxkBAAEGNfhjWZ3xmhAsBY8S-jmARx0XIBYRpAACkB8AAtf4yErFKoGjiImKDyoE']
+sticers = ['CAACAgIAAxkBAAEGNhxjWbhNyUy03_23sHJw4x-PozFEPAACJygAAs5a0UqMKBlggLIYxyoE',
+           'CAACAgIAAxkBAAEGNh5jWbhR5Y2slbCgQ92AKZYd9olJmgACwR4AAqh_0UreBOLLdiV3dioE',
+           'CAACAgIAAxkBAAEGNiBjWbhSzT-GZWeOIBLKpBRyPl9tzwACDBwAAsgw0Eq8pOohczNGcSoE',
+           'CAACAgIAAxkBAAEGNiRjWbzi5KERR5e0Uyf-bMorjcS1YAACayIAAuYYyEoEqeRJSKYgnCoE',
+           'CAACAgIAAxkBAAEGNiZjWbzkliI-DhfnY2XxgwFPtV-IswACYSQAAm6KyUr-u66z2ClFIyoE',
+           'CAACAgIAAxkBAAEGNihjWbzmfBE3Dr2-5TSW0QF2wIdpVAAC0SUAAjfDyEqKCb0Ms8X-JSoE',
+           'CAACAgIAAxkBAAEGNipjWbzobtMJ2aC-aN4_9axChwjtxwAC9SMAAjs9yUo3oR8DLrhXbSoE',
+           'CAACAgIAAxkBAAEGNixjWbzuqD4tq1BPKhqnAn7HMML0VgACGiIAAifr0EpbqCs85jZLgSoE',
+           'CAACAgIAAxkBAAEGNi5jWbzwnBBSPrnOhjuE25dpkkVNRQACQScAAsG9yUr7L1wyjjfrNSoE',
+           'CAACAgIAAxkBAAEGNjBjWbzxorOydsDaw4qS9UdVnxYRowACpyIAAhHLyErdaaibMHT0LSoE',
+           'CAACAgIAAxkBAAEGNjJjWbzzyZi3cLKSbP5eju7K04gFIAACeiQAAqvD0Ur7EFPzyTuVmSoE',
+           'CAACAgIAAxkBAAEGNjRjWb4lUnxws_n8lrD90UO7TXkn4gACXiYAAlR30EoBocbmnFcgZCoE']
 
 markup_first = ReplyKeyboardMarkup(resize_keyboard=True).add(
     KeyboardButton('Жги')
